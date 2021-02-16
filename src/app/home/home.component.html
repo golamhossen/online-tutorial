@@ -1,0 +1,19 @@
+<div id="container-fluid">
+  <div class="row" >
+    <div class="col-3 left">
+      <button type="button" class="btn btn-success btn-lg btn-block" [routerLink]="['/home/cart']">Cart</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" [routerLink]="['/home/invoice']">Invoice</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="nurse">Digital Marketing</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="pathology">MS Office</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="reception">Leadership</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="notice">Excel</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="departments">SEO</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="monitor">English Language</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="logout">Logout</button>
+      
+    </div>
+    <div class="col-9 right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

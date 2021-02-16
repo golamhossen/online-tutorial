@@ -1,0 +1,74 @@
+
+
+<!-- **************************************************** -->
+<!-- <div class="container">
+  <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+          <div class="box">
+              <div class="shape1"></div>
+              <div class="shape2"></div>
+              <div class="shape3"></div>
+              <div class="shape4"></div>
+              <div class="shape5"></div>
+              <div class="shape6"></div>
+              <div class="shape7"></div>
+              <div class="float">
+                  <form class="form" action="">
+                      <div class="form-group">
+                          <label for="username" class="text-white">Username:</label><br>
+                          <input type="text" name="username" id="username" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label for="password" class="text-white">Password:</label><br>
+                          <input type="text" name="password" id="password" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                      </div>
+                  </form>
+              </div>
+          </div> -->
+          <!-- <form #registrationForm="ngForm">
+            <label for="cars" style="padding: 3%;"> Login AS:</label>  
+                               <select id="users" name="user">
+                                  <option value="client" ngModel>Student</option>
+                                  <option value="freelancer" ngModel>Teacher</option>
+                               </select>
+            
+            <label>
+              <p class="label-txt">ENTER YOUR USERNAME</p>
+              <input type="text" name="username" id="" class="input" ngModel>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            <label>
+              <p class="label-txt">ENTER YOUR PASSWORD</p>
+              <input type="text" name="password" id="" class="input" ngModel>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label>
+            
+            <button type="submit" (click)="loginUser(loginForm.value)">submit</button>
+          </form> -->
+<!-- **************************************************** -->
+<h2>Login Here</h2>
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+    <label> LOGIN AS:</label>
+    <select id="users" name="user">
+        <option value="client">Client</option>
+        <option value="freelancer">Freelancer</option>
+    </select>
+    <p>ENTER YOUR USERNAME</p>
+    <input type="text" name="username" id="" ngModel>
+    <p>ENTER YOUR PASSWORD</p>
+    <input type="text" name="password" id="" ngModel><br>
+    <input type="submit"><br><br>
+    
+
+</form>
+<ul *ngFor="let abc of allData">
+    <li *ngIf="abc.currentUser == username && abc.currentUserPassword == password">{{abc.name}} logging Successful</li>
+</ul>

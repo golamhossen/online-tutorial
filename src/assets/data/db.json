@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "name": "GOLAM HOSSEN",
+      "username": "golam_java",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "Surjo",
+      "username": "admin",
+      "password": "125",
+      "id": 2
+    },
+    {
+      "name": "Milton",
+      "username": "mil",
+      "password": "12",
+      "id": 3
+    },
+    {
+      "name": "Milton",
+      "username": "mil",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "Habib",
+      "username": "hh",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "name": "Habib",
+      "username": "hh",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "name": "Fahim",
+      "username": "ff",
+      "password": "1234",
+      "id": 7
+    },
+    {
+      "name": "Habib",
+      "username": "babu",
+      "password": "1234",
+      "id": 8
+    }
+  ],
+  "teacher" : [
+    
+  ]
+}

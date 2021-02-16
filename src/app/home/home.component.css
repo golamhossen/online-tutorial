@@ -1,0 +1,22 @@
+#container{
+    height: 100%;
+    width: 100%;
+
+    padding-top: 80px;
+}
+.left{
+    height: 100%;
+    width: 20%; 
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+   
+    
+}
+.ri{
+    height: 100%;
+    width: 20%; 
+    float: left;
+}
+
+

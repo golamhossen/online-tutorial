@@ -1,0 +1,162 @@
+<p>
+  package works!
+</p>
+<!--  <h1>Create Package</h1>
+<form action="">
+Package ID : <input type="number" name="pid" id=""><br><br>
+Add Place : <input type="text" name="ap" id=""><br><br>
+Number of Audelt : <input type="number" name="noa" id=""><br><br>
+Number of Children : <input type="number" name="noc" id=""><br><br>
+Desciption : <input type="textarea" name="" id="desc"><br><br>
+Stay Amount : <input type="text" name="stayamount" id=""><br><br>
+Food Amount : <input type="text" name="famount" id=""><br><br>
+Bus Amount : <input type="text" name="busamount" id=""><br><br>
+Number of Days :<input type="number" name="nod" id=""><br><br>
+Number of Nights : <input type="number" name="non" id=""><br><br>
+Add Image : <img src="#" alt="Girl in a jacket" width="200px" height="200px"><br><br> 
+<div style="text-align: center;">
+  <button *ngIf="!isEdit" type="button" style=" text-align: center;" (click)="createPackage(myForm.value)"
+      class="btn btn-primary">Submit</button>
+  <button *ngIf="isEdit" type="button" style=" text-align: center;" (click)="updatePackage(myForm.value)"
+      class="btn btn-primary">Update</button>
+</div> 
+
+</form>  -->
+<div class="contain">
+  <div class="left">
+    <h3>Create Tour Package</h3>
+    <form #myForm="ngForm">
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Package ID </label>
+        <div class="col-sm-6">
+          <input type="text" name="pid" class="form-control" id="inputPassword" [(ngModel)]="packageObj.pid">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Add Place</label>
+        <div class="col-sm-6">
+          <input type="text" name="aPlace" class="form-control" id="inputPassword" [(ngModel)]="packageObj.aPlace">
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Number of Audelt</label>
+        <div class="col-sm-6">
+          <input type="number" name="noAudelt" class="form-control" id="inputPassword"
+            [(ngModel)]="packageObj.noAudelt">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Number of Children</label>
+        <div class="col-sm-6">
+          <input type="number" name="noChil" class="form-control" id="inputPassword" [(ngModel)]="packageObj.noChil">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-6">
+          <input type="datetime-local" name="desc" class="form-control" id="inputPassword"
+            [(ngModel)]="packageObj.desc">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Stay Amount</label>
+        <div class="col-sm-6">
+          <input type="text" name="stayamount" class="form-control" id="inputPassword"
+            [(ngModel)]="packageObj.stayamount">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Food Amount</label>
+        <div class="col-sm-6">
+          <input type="text" name="famount" class="form-control" id="inputPassword" [(ngModel)]="packageObj.famount">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Bus Amount</label>
+        <div class="col-sm-6">
+          <input type="text" name="busamount" class="form-control" id="inputPassword"
+            [(ngModel)]="packageObj.busamount">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Number of Days</label>
+        <div class="col-sm-6">
+          <input type="number" name="noDays" class="form-control" id="inputPassword" [(ngModel)]="packageObj.noDays">
+        </div>
+
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Number of Nights</label>
+        <div class="col-sm-6">
+          <input type="number" name="noNight" class="form-control" id="inputPassword" [(ngModel)]="packageObj.noNight">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Add Image</label>
+        <div class="col-sm-6">
+          <input type="text" name="aimage" class="form-control" id="inputPassword" [(ngModel)]="packageObj.aimage">
+          <!-- <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> -->
+        </div>
+
+      </div>
+      <div style="text-align: center;">
+        <button *ngIf="!isEdit" type="button" style=" text-align: center;" (click)="createPackage(myForm.value)"
+          class="btn btn-success">Submit</button>
+        <button *ngIf="isEdit" type="button" style=" text-align: center;" (click)="updatePackage(myForm.value)"
+          class="btn btn-success">Update</button>
+      </div>
+    </form>
+    <div class="right">
+  <h3>Tour Package List</h3>
+  <table class="table">
+
+      <thead>
+          <tr>
+              <th scope="col">PId</th>
+              <th scope="col">Add Place</th>
+              <th scope="col">Number of Audelt</th>
+              <th scope="col">Number of Children</th>
+              <th scope="col">Desciption</th>
+              <th scope="col">Stay Amount</th>
+              <th scope="col"><i>Food Amount</i></th>
+              <th scope="col">Bus Amount</th>
+              <th scope="col">Number of Days</th>
+              <th scope="col">Number of Nights</th>
+              <th scope="col">Image</th>
+
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let tour of allPackage">
+              <th scope="row">{{tour.id}}</th>
+
+              <td>{{tour.pid}}</td>
+              <td>{{tour.aPlace}}</td>
+              <td>{{tour.noAudelt}}</td>
+              <td>{{tour.noChil}}</td>
+              <td>{{tour.desc}}</td>
+              <td>{{tour.stayamount}}</td>
+              <td>{{tour.famount}}</td>
+              <td>{{tour.busamount}}</td>
+              <td>{{tour.noDays}}</td>
+              <td>{{tour.noNight}}</td>
+              <td>{{tour.aimage}}</td>
+              <td><button (click)="editPackage(tour)">Edit </button></td>
+              <td><button (click)="deletePackage(tour)">Delete </button></td>
+             
+          </tr>
+      </tbody>
+  </table>
+  </div>
+</div>
